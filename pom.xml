@@ -41,6 +41,22 @@
             <version>1.8.1</version>
         </dependency>
         <dependency>
+            <groupId>org.mvnpm</groupId>
+            <artifactId>bootstrap</artifactId>
+            <version>5.3.3</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mvnpm</groupId>
+            <artifactId>bootstrap-icons</artifactId>
+            <version>1.11.3</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-web-dependency-locator</artifactId>
+        </dependency>
+        <dependency>
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-arc</artifactId>
         </dependency>
