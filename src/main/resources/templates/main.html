@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>{#insert title /}</title>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" media="screen" href="/_static/bootstrap/5.3.3/dist/css/bootstrap.css">
-        <link rel="stylesheet" media="screen" href="/_static/bootstrap-icons/1.11.3/font/bootstrap-icons.css">
-        {#insert moreStyles /}
-        <script src="/_static/bootstrap/5.3.3/dist/js/bootstrap.min.js" type="text/javascript" charset="UTF-8"></script>
-        {#insert moreScripts /}
-    </head>
+<head>
+    <title>{#insert title /}</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/api/webjars/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/api/webjars/bootstrap-icons/font/bootstrap-icons.css">
+    {#insert moreStyles /}
+</head>
     <body>
-    {#insert /}
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3 col-lg-2 bg-light p-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Bookmarks</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Categories</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Settings</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-9 col-lg-10 p-4">
+                    {#insert /}
+                </div>
+            </div>
+        </div>
+        <script src="/api/webjars/bootstrap/js/bootstrap.bundle.min.js"></script>
+        {#insert moreScripts /}
     </body>
 </html>

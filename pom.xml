@@ -36,25 +36,23 @@
             <version>3.0.20</version>
         </dependency>
         <dependency>
-            <groupId>io.quarkiverse.web-bundler</groupId>
-            <artifactId>quarkus-web-bundler</artifactId>
-            <version>1.8.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.mvnpm</groupId>
-            <artifactId>bootstrap</artifactId>
-            <version>5.3.3</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.mvnpm</groupId>
-            <artifactId>bootstrap-icons</artifactId>
-            <version>1.11.3</version>
-            <scope>provided</scope>
+            <groupId>io.quarkiverse.renarde</groupId>
+            <artifactId>quarkus-renarde-security</artifactId>
+            <version>3.0.20</version>
         </dependency>
         <dependency>
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-web-dependency-locator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>bootstrap</artifactId>
+            <version>5.3.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>bootstrap-icons</artifactId>
+            <version>1.13.1</version>
         </dependency>
         <dependency>
             <groupId>io.quarkus</groupId>
