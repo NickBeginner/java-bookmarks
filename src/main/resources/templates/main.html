@@ -1,27 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>{#insert title /}</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/api/webjars/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/api/webjars/bootstrap-icons/font/bootstrap-icons.css">
-    {#insert moreStyles /}
-</head>
+    <head>
+        <title>{#insert title /}</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/api/webjars/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/api/webjars/bootstrap-icons/font/bootstrap-icons.css">
+        <style>
+            .nav-link.active {
+                background-color: #0d6efd;
+                color: white !important;
+                border-radius: 5px;
+            }
+        </style>
+        {#insert moreStyles /}
+    </head>
     <body>
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-3 col-lg-2 bg-light p-3">
-                    <ul class="nav flex-column">
+            <div class="row min-vh-100">
+
+                <div class="col-md-3 col-lg-2 bg-light p-3 border-end">
+                    <div class="mb-4 text-center">
+                        <h4>🔖 MyMarks</h4>
+                    </div>
+
+                    <ul class="nav flex-column gap-2">
+
                         <li class="nav-item">
-                            <a class="nav-link" href="">Bookmarks</a>
+                            <a class="nav-link {request.path.contains('/bookmarks') ? 'active' : ''}"
+                               href="{uri:Bookmarks.bookmarks}">
+                                <i class="bi bi-bookmark-fill me-2"></i> Bookmarks
+                            </a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="">Categories</a>
+                            <a class="nav-link {request.path.contains('/categories') ? 'active' : ''}"
+                               href="{uri:Categories.categories}">
+                                <i class="bi bi-tags-fill me-2"></i> Categories
+                            </a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="">Settings</a>
+                            <a class="nav-link {request.path.contains('/settings') ? 'active' : ''}"
+                               href="#">
+                                <i class="bi bi-gear-fill me-2"></i> Settings
+                            </a>
                         </li>
                     </ul>
+
+                    <hr class="mt-4">
+                    <div class="small text-muted text-center">
+                        v1.0.0
+                    </div>
                 </div>
 
                 <div class="col-md-9 col-lg-10 p-4">
@@ -29,6 +58,7 @@
                 </div>
             </div>
         </div>
+
         <script src="/api/webjars/bootstrap/js/bootstrap.bundle.min.js"></script>
         {#insert moreScripts /}
     </body>
